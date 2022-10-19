@@ -10,6 +10,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
+  console.log(req.query)
   res.json({ message: 'Hello World!', query: req.query })
 })
 
